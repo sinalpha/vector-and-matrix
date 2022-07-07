@@ -1,0 +1,36 @@
+{
+    //See https://go.microsoft.com/fwlink/?Linkid=733558
+    //for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "runner": "terminal",
+    "tasks": [
+        //C++ obj compile
+        {
+            "label": "g++ build C++ obj",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-c",
+                "-o",
+                "${fileDirname}\\..\\main.o",
+                "${fileDirname}\\main.cpp"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        },
+        {
+            "label": "build",
+            "type":"shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-o",
+                "${fileDirname}\\..\\main.exe",
+                "${fileDirname}\\..\\main.cpp"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build"
+        }
+    ]
+}
