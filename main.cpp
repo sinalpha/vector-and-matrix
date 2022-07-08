@@ -16,6 +16,12 @@ int main(){
     v0 += v1; //연산자 오버로딩된 연산자 +
     v0.print();
 
+    v0 *= v1;
+    v0.print();
+
+    v0 *= 2;
+    v0.print();
+
     return 0;
 }
 //unital algebra : 결합 대수 

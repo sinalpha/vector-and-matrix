@@ -21,7 +21,19 @@ class Vector2D{
             
             x_ += v_input.x_;
             y_ += v_input.y_;
-
             return *this;
         }
+
+        Vector2D& operator *=(const float scalar){
+            x_ *= scalar;
+            y_ *= scalar;
+            return *this;
+        }
+
+        Vector2D& operator *=(const Vector2D& v_input){
+            x_ *= v_input.x_;
+            y_ *= v_input.y_;
+            return *this;
+        }
+
 };      
